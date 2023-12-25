@@ -8,8 +8,9 @@ const About = () => {
           <div className="card p-3 py-4">
             <div className="text-center">
               <img
-                src="https://avatars.githubusercontent.com/u/93030628?v=4"
+                src="https://picsum.photos/id/65/600/400"
                 width={100}
+                height={100}
                 className="rounded-circle"
                 alt="a"
               />
@@ -18,7 +19,7 @@ const About = () => {
               <span className="bg-secondary p-1 px-4 rounded text-white">
                 Pro
               </span>
-              <h5 className="mt-2 mb-0">Anthony Harold</h5>
+              <h5 className="mt-2 mb-0">Bahar Köse</h5>
               <span>Fullstack Developer</span>
               <div className="px-4 mt-1">
                 <p className="fonts">
@@ -51,7 +52,8 @@ const About = () => {
                   <a
                     className="text-decoration-none text-black "
                     href="https://github.com/anthonyharold67"
-                    target="true">
+                    target="true"
+                  >
                     Message
                   </a>
                 </button>
@@ -59,7 +61,8 @@ const About = () => {
                   <a
                     className="text-decoration-none text-white"
                     href="https://github.com/anthonyharold67"
-                    target="true">
+                    target="true"
+                  >
                     Contact
                   </a>
                 </button>
