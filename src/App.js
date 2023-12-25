@@ -1,10 +1,12 @@
-
 import AppRouter from "./router/AppRouter";
+import ProductProvider from "./context/ProductProvider";
 
 function App() {
   return (
     <div className="bg-light app">
-     <AppRouter/>
+      <ProductProvider>
+        <AppRouter />
+      </ProductProvider>
     </div>
   );
 }

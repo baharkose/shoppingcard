@@ -1,11 +1,14 @@
 import ProductCard from "../components/ProductCard";
 import CardTotal from "../components/CardTotal";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { ProductContext } from "../context/ProductProvider";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const {productF} = useContext(ProductContext)
 
   const getData = async () => {
     try {
@@ -15,6 +18,7 @@ const ProductList = () => {
       console.log(data);
       setProducts(data);
       setLoading(false);
+      productF(data)
     } catch (error) {
       console.log(error);
     }
@@ -22,6 +26,7 @@ const ProductList = () => {
 
   useEffect(() => {
     getData();
+
   }, []);
 
   return (
