@@ -8,7 +8,7 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const {productF} = useContext(ProductContext)
+  const { productF } = useContext(ProductContext);
 
   const getData = async () => {
     try {
@@ -18,7 +18,7 @@ const ProductList = () => {
       console.log(data);
       setProducts(data);
       setLoading(false);
-      productF(data)
+      productF(data);
     } catch (error) {
       console.log(error);
     }
@@ -26,7 +26,7 @@ const ProductList = () => {
 
   useEffect(() => {
     getData();
-
+    //- sayfa her render olduğunda istek atabilmesi için
   }, []);
 
   return (
@@ -39,10 +39,12 @@ const ProductList = () => {
         ) : (
           <>
             <article id="product-panel" className="col-md-5">
-              <ProductCard products={products} />
+              {products.map((product) => (
+                <ProductCard key={product.id} getData={getData} {...product} />
+              ))}
             </article>
             <article className="col-md-5 m-3">
-              <CardTotal />
+              <CardTotal products={products} />
             </article>
           </>
         )}
