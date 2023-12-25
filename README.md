@@ -1,2 +1,4 @@
-- Gerekli Paketler yüklü.
-- Fontawesome cdn linki ile yüklü [index.html](./public/index.html) içerisinde. Readme de belirtildiği gibi `react-icons` paketini de kullanabilirsiniz.
+
+Live at: https://shoppingcard-ashen.vercel.app/
+
+![image](https://github.com/baharkose/shoppingcard/assets/110201916/bc218e24-2a52-49a9-9025-35efb89ebe57)
